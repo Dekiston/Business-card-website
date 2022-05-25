@@ -1,5 +1,5 @@
 
-import './App.css';
+import './App.scss';
 import logo from './/components/logo.jpg';
 
 function App() {
@@ -13,21 +13,14 @@ function App() {
         <h1>Обо мне</h1>
         <h1>Мои навыки</h1>
         <h1>Контакты</h1>
+        <input type="checkbox" class="switch"></input>
       </div>
       </header>
-
-      <div class="flex">
-      <div class="bcblue"><div><h1>Первый блок</h1></div></div>
-      
-      <div class="bcred"><h1>Второй блок</h1></div>
-      
-      </div>
-
-      <div>
-      <h1>Привет, мир!</h1>
-      
-      
-      </div>
+    <body>
+       <div>
+         <h1>Ger</h1>
+        </div>
+    </body>
     </div>
   );
 }
