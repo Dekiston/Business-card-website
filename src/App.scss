@@ -1,11 +1,31 @@
+@mixin arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
 
-#header {
-  background-color: #282c34;
+
+@mixin pages {
+  display: flex;
+  min-height: 87.7vh;
+
+  .aboutPages {background-color: #FF9840;}
+
+  .skillsPages {background-color: #34C6CD;}
+
+  .contactsPages {background-color: #5ED2B8;}
+        
+   h1 {text-align: center;}
+
+}
+
+header {
+  background-color: #31241c;
   min-height: 100%;
   display: flex;
   /*flex-direction: column;*/
   align-items: center;
-    color: white;
+  color: white;
 
     .logo {
       width: 100px;
@@ -24,14 +44,56 @@
       justify-content: right;
     }
 
+    #Night, #Day {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 5%;
+      display: relative;
+      cursor: pointer;
+    }
+
     h1 {margin-left: 10%;
       text-align: center;
       margin: auto;
       color: rgb(255, 255, 255);
     }
+    
+    .Teleport {cursor: pointer;}
 }
 
-body {background-color: #2e3747;}
+.carousel {
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+    
+  .main-window {
+    overflow: hidden;
+    
+    .arrow-left {
+      @include arrow;
+      left: 0.6%;
+    }
+
+    .arrow-right {
+      @include arrow;
+      right: 1%;
+      }
+
+    .allPages {
+      @include pages;
+    }
+
+    .allPagesAnimation {
+      @include pages;
+      transition: translate;
+      transition-property: transform;
+      transition-duration: 300ms;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0.1s;
+    }
+  }
+}
 
 
 
