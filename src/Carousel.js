@@ -9,7 +9,7 @@ export const Carusel = ({children}) => {
     
     const LeftArrowClick = () => {
         setOffset((currentOffset) => {
-            if (currentOffset === -100) { return -400}
+            if (currentOffset >= -100) { return -400}
             const newOffset = currentOffset + 100;
             console.log (newOffset);
             return newOffset
@@ -18,7 +18,7 @@ export const Carusel = ({children}) => {
     
     const RightArrowClick = () => {         
         setOffset((currentOffset) => {
-            if (currentOffset === -300) { return 0}
+            if (currentOffset <= -300) { return 0}
             const newOffset = currentOffset - 100;
             console.log ('Правый =' + newOffset);
             
