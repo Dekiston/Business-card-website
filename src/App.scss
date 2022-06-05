@@ -10,7 +10,7 @@
 
   .aboutPages {background-color: #FF9840;}
 
-  .skillsPages {background-color: #34C6CD;}
+  .skillsPages {background-color: #e96117;}
 
   .contactsPages {background-color: #ecc260;}
         
@@ -29,6 +29,15 @@
   display: flex;
   justify-content: flex-start;
   cursor: pointer;
+}
+
+@mixin list {
+  text-align: center;
+  justify-content: center;
+  background-color: #21211a;
+  border-radius: 1em;
+  display: flex;
+  justify-content: flex-start;
 }
 
 header {
@@ -80,7 +89,7 @@ header {
   user-select: none;
     
   .main-window {
-    overflow: hidden;
+    overflow: scroll;
     
     .arrow-left {
       @include arrow;
@@ -163,9 +172,58 @@ min-width: 50%;
   padding: auto;
 }
 
-.logoIcon {
-  height: 100%;
-  width: 80%;
+
+}
+
+.skillsPages {
+  display:flex;
+  
+  .proffesionalSkills {
+    min-width: 50%;
+    
+    .listPSkills {
+      @include list;
+      height: 92%;
+      width: 95%;
+      margin: 3% 1.5% 3% 3%;
+      flex-direction:column;
+
+
+      .skillsField {
+        margin: 0%;
+        background-color: #e8f0f0;
+        width: 100%;
+        height: 87%;
+        border-radius: 0 0 1em 1em;
+      }
+  
+    }
+
+  }
+
+  .moreSkills {
+    min-width: 50%;
+    display: flex;
+    flex-direction:column;
+
+  .listMSkills {
+  @include list;
+  height: 92%;
+  width: 95%;
+  margin: 3% 3% 3% 1.5%;
+  }
+
+  }
+}
+
+a {
+  text-decoration:none;
+  color: inherit;
+}
+
+.Flex {
+  display: flex;
+  min-width: 100%;
 }
 
 h1, h2 {
@@ -173,9 +231,14 @@ h1, h2 {
       margin: auto;
       color: rgb(255, 255, 255);
 }
+
+.logoIcon {
+  height: 100%;
+  width: 80%;
 }
 
-a {
-  text-decoration:none;
-  color: inherit;
+.skillIcon {
+  height: 7em;
+  width: 7em;
+  margin: 2.5em 1.5em;
 }
