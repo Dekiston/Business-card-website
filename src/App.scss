@@ -8,14 +8,21 @@
   display: flex;
   min-height: 87.7vh;
 
-  .aboutPages {background-color: #FF9840;}
+  .aboutPages {
+    background-color: #ff9840;
+  }
 
-  .skillsPages {background-color: #e96117;}
+  .skillsPages {
+    background-color: #e96117;
+  }
 
-  .contactsPages {background-color: #ecc260;}
-        
-   h1 {text-align: center;}
+  .contactsPages {
+    background-color: #ecc260;
+  }
 
+  h1 {
+    text-align: center;
+  }
 }
 
 @mixin contact {
@@ -48,50 +55,53 @@ header {
   align-items: center;
   color: white;
 
-    .logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 10px 0px 7px 8px;
-      flex: none;
-      align-items: left;
-      justify-content: left;
-     }
+  .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px 0px 7px 8px;
+    flex: none;
+    align-items: left;
+    justify-content: left;
+  }
 
-     .about {
-      margin: 0% 10% 0% 0% ;
-      display: flex;
-      flex: 2;
-      justify-content: right;
-    }
+  .about {
+    margin: 0% 10% 0% 0%;
+    display: flex;
+    flex: 2;
+    justify-content: right;
+  }
 
-    #Night, #Day {
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      right: 5%;
-      display: relative;
-      cursor: pointer;
-    }
+  #Night,
+  #Day {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 5%;
+    display: relative;
+    cursor: pointer;
+  }
 
-    h1 {margin-left: 10%;
-      text-align: center;
-      margin: auto;
-      color: rgb(255, 255, 255);
-    }
-    
-    .Teleport {cursor: pointer;}
+  h1 {
+    margin-left: 10%;
+    text-align: center;
+    margin: auto;
+    color: rgb(255, 255, 255);
+  }
+
+  .Teleport {
+    cursor: pointer;
+  }
 }
 
 .carousel {
   align-items: center;
   justify-content: center;
   user-select: none;
-  
-    
+
   .mainWindow {
     overflow: hidden;
-    
+
     .arrow-left {
       @include arrow;
       left: 0.6%;
@@ -100,7 +110,7 @@ header {
     .arrow-right {
       @include arrow;
       right: 1%;
-      }
+    }
 
     .allPages {
       @include pages;
@@ -118,76 +128,65 @@ header {
 }
 
 .contactsPages {
-  
-display:flex;
+  display: flex;
 
+  .contactGroupOne {
+    min-width: 50%;
 
-.contactGroupOne {
+    .contactGitHub {
+      @include contact;
+    }
 
-min-width: 50%;
+    .contactSkype {
+      @include contact;
+    }
 
-
-
-  .contactGitHub {
-    @include contact;
+    .contactHh {
+      @include contact;
+    }
   }
 
-  .contactSkype {
-    @include contact;
+  .contactGroupTwo {
+    min-width: 50%;
+
+    border-radius: 100px 0px 0px 100px;
+
+    .contactMail {
+      @include contact;
+    }
+
+    .contactLinkedIn {
+      @include contact;
+    }
+
+    .contactTg {
+      @include contact;
+    }
   }
 
-  .contactHh {
-    @include contact;
+  .contactLogo {
+    background-color: white;
+    border-radius: 1em 0 0 1em;
+    width: 4em;
+    position: left;
+    justify-content: middle;
+    vertical-align: middle;
+    padding: auto;
   }
-    
-}
-
-.contactGroupTwo {
-
-  min-width: 50%;
-
-  border-radius: 100px 0px 0px 100px;
-
-  .contactMail {
-    @include contact;
-  }
-
-  .contactLinkedIn {
-    @include contact;
-    
-  }
-
-  .contactTg {
-    @include contact;
-  }
-  
-}
-
-.contactLogo {
-  background-color: white;
-  border-radius: 1em 0 0 1em;
-  width: 4em;
-  position: left;
-  justify-content: middle;
-  vertical-align: middle;
-  padding: auto;
-}
-
-
 }
 
 .skillsPages {
-  display:flex;
-  
+  display: flex;
+
   .proffesionalSkills {
     min-width: 50%;
-    
+
     .listPSkills {
       @include list;
       height: 92%;
       width: 95%;
       margin: 3% 1.5% 3% 3%;
-      flex-direction:column;
+      flex-direction: column;
 
       .skillsField {
         margin: 0%;
@@ -196,41 +195,37 @@ min-width: 50%;
         height: 87%;
         border-radius: 0 0 1em 1em;
       }
-  
     }
-
   }
 
   .moreSkills {
     min-width: 50%;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
 
-  .listMSkills {
-  
-  height: 92%;
-  width: 95%;
-  margin: 3% 3% 3% 1.5%;
-  background-color: transparent;
+    .listMSkills {
+      height: 92%;
+      width: 95%;
+      margin: 3% 3% 3% 1.5%;
+      background-color: transparent;
 
-  .oneColumn {
-    @include list;
-    height: 57%;
-    margin-bottom: 3%;
-    flex-direction:column;
-  }
-  .twoColumn {
-    @include list;
-    height: 40%;
-    flex-direction:column;
-  }
-  }
-
+      .oneColumn {
+        @include list;
+        height: 57%;
+        margin-bottom: 3%;
+        flex-direction: column;
+      }
+      .twoColumn {
+        @include list;
+        height: 40%;
+        flex-direction: column;
+      }
+    }
   }
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
   color: inherit;
 }
 
@@ -239,10 +234,11 @@ a {
   min-width: 100%;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
-      margin: auto;
-      color: rgb(255, 255, 255);
+  margin: auto;
+  color: rgb(255, 255, 255);
 }
 
 .logoIcon {
