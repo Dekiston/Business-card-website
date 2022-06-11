@@ -87,9 +87,10 @@ header {
   align-items: center;
   justify-content: center;
   user-select: none;
+  
     
-  .main-window {
-    overflow: scroll;
+  .mainWindow {
+    overflow: hidden;
     
     .arrow-left {
       @include arrow;
@@ -188,7 +189,6 @@ min-width: 50%;
       margin: 3% 1.5% 3% 3%;
       flex-direction:column;
 
-
       .skillsField {
         margin: 0%;
         background-color: #e8f0f0;
@@ -207,10 +207,23 @@ min-width: 50%;
     flex-direction:column;
 
   .listMSkills {
-  @include list;
+  
   height: 92%;
   width: 95%;
   margin: 3% 3% 3% 1.5%;
+  background-color: transparent;
+
+  .oneColumn {
+    @include list;
+    height: 57%;
+    margin-bottom: 3%;
+    flex-direction:column;
+  }
+  .twoColumn {
+    @include list;
+    height: 40%;
+    flex-direction:column;
+  }
   }
 
   }

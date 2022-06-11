@@ -1,5 +1,5 @@
 import { useState, useEffect, Children, cloneElement } from 'react';
-import './App.scss';
+import '../App.scss';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export const Carusel = ({children}) => {
@@ -20,7 +20,7 @@ export const Carusel = ({children}) => {
         setOffset((currentOffset) => {
             if (currentOffset <= -300) { return 0}
             const newOffset = currentOffset - 100;
-            console.log ('Правый =' + newOffset);
+            console.log ('X = ' + newOffset);
             
             return newOffset
         })
@@ -35,7 +35,7 @@ export const Carusel = ({children}) => {
     }, []);
 
     return (
-        <div className='main-window'>
+        <div className='mainWindow'>
             <div className="window">
             {(offset === 0) || (offset === -400)  ? (
                 <div className="allPages" style = {{transform: `translateX(${offset}%)` }}>                
