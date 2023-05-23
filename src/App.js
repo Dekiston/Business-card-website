@@ -2,6 +2,7 @@ import {
   BsFillBrightnessHighFill,
   BsFillBrightnessLowFill,
 } from "react-icons/bs";
+
 import { Carusel } from "./modules/Carousel.js";
 import { AboutMe } from "./modules/AboutMe.js";
 import { Skills } from "./modules/Skills.js";
@@ -10,7 +11,7 @@ import "./App.scss";
 import logo from ".//components/logo.jpg";
 
 const TeleportAbout = () => {
-  document.mainWindow.scrollX(-100, 0);
+  
   console.log("Должно телепортировать на X = -100");
 };
 const TeleportSkills = () => {
@@ -49,11 +50,7 @@ function App() {
       <body>
         <div className="carousel">
           <Carusel>
-            <div className="aboutPages">
-              <h1>Здесь будет информация обо мне</h1>
-              <AboutMe></AboutMe>
-            </div>
-
+            
             <div className="skillsPages">
               <Skills></Skills>
             </div>
@@ -63,13 +60,14 @@ function App() {
             </div>
 
             <div className="aboutPages">
-              <h1>Здесь будет информация обо мне</h1>
+              <AboutMe></AboutMe>
             </div>
 
             <div className="skillsPages">
               <Skills></Skills>
             </div>
-          </Carusel>
+
+                  </Carusel>
         </div>
       </body>
     </div>

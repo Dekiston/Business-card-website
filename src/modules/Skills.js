@@ -19,7 +19,7 @@ export const Skills = () => {
     <div className="Flex">
       <div className="proffesionalSkills">
         <div className="listPSkills">
-          <h1>Высокий уровень</h1>
+          <h1>Хороший уровень</h1>
           <div className="skillsField">
             <FaCss3 className="skillIcon"></FaCss3>
             <FaGitAlt className="skillIcon"></FaGitAlt>
@@ -39,11 +39,11 @@ export const Skills = () => {
       <div className="moreSkills">
         <div className="listMSkills">
           <div className="oneColumn">
-            <h1>Высокий уровень</h1>
+            <h1>Изучается</h1>
             <div className="skillsField"></div>
           </div>
           <div className="twoColumn">
-            <h1>Высокий уровень</h1>
+            <h1>В будущем</h1>
             <div className="skillsField"></div>
           </div>
         </div>
